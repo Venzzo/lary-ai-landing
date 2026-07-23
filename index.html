@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lary AI — Assistente Cognitiva Local-First & VTuber Companion</title>
+    <meta name="description" content="Lary é uma assistente cognitiva local-first com automação nativa no Windows, processamento local, privacidade total e interface VTuber.">
+    <meta name="keywords" content="Lary AI, Assistente Cognitiva, Local-First, Ollama, Python, Automação Windows, VTuber, Inteligência Artificial">
+    <meta name="author" content="Portfolio Project">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icons for crisp UI icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ELEGANT PERIPHERAL PCB SYSTEM & DISCRETE DATA FLOW (LAYERS 1-3) -->
+    <div class="pcb-system-container">
+        <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" class="pcb-svg">
+            <defs>
+                <!-- Minimal Ambient Glow Filter (Layer 3) -->
+                <filter id="pcbMicroGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="2" result="blur" />
+                </filter>
+                
+                <!-- Discreet Red Packet Glow Filter (Layer 2) -->
+                <filter id="microRedGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="1.5" result="blur" />
+                    <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+
+                <!-- Discreet Cyan Packet Glow Filter (Layer 2) -->
+                <filter id="microCyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="1.5" result="blur" />
+                    <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </defs>
+
+            <!-- LAYER 3: ULTRA-SUBTLE AMBIENT DEPTH GLOW -->
+            <g class="pcb-glow-layer" filter="url(#pcbMicroGlow)" opacity="0.35">
+                <!-- Top-Left Corner Frame -->
+                <path d="M 0 60 H 120 L 180 120 V 220 L 140 260 H 0" stroke="rgba(255, 42, 75, 0.1)" stroke-width="2" fill="none" />
+                <path d="M 40 0 V 80 L 100 140 H 220 L 260 180 V 300" stroke="rgba(255, 42, 75, 0.08)" stroke-width="1.8" fill="none" />
+
+                <!-- Top-Right Corner Frame -->
+                <path d="M 1920 60 H 1800 L 1740 120 V 220 L 1780 260 H 1920" stroke="rgba(255, 42, 75, 0.1)" stroke-width="2" fill="none" />
+                <path d="M 1880 0 V 80 L 1820 140 H 1700 L 1660 180 V 300" stroke="rgba(255, 42, 75, 0.08)" stroke-width="1.8" fill="none" />
+
+                <!-- Bottom-Left Corner Frame -->
+                <path d="M 0 820 H 140 L 200 880 V 1000 L 140 1060 H 0" stroke="rgba(255, 42, 75, 0.1)" stroke-width="2" fill="none" />
+                <path d="M 60 1080 V 960 L 140 880 H 240 L 280 920 V 1080" stroke="rgba(0, 242, 254, 0.06)" stroke-width="1.8" fill="none" />
+
+                <!-- Bottom-Right Corner Frame -->
+                <path d="M 1920 820 H 1780 L 1720 880 V 1000 L 1780 1060 H 1920" stroke="rgba(255, 42, 75, 0.1)" stroke-width="2" fill="none" />
+                <path d="M 1860 1080 V 960 L 1780 880 H 1680 L 1640 920 V 1080" stroke="rgba(255, 42, 75, 0.08)" stroke-width="1.8" fill="none" />
+
+                <!-- Side Outer Edges -->
+                <path d="M 0 420 H 90 L 150 480 V 620 L 90 680 H 0" stroke="rgba(0, 242, 254, 0.06)" stroke-width="1.8" fill="none" />
+                <path d="M 1920 420 H 1830 L 1770 480 V 620 L 1830 680 H 1920" stroke="rgba(255, 42, 75, 0.08)" stroke-width="1.8" fill="none" />
+            </g>
+
+            <!-- LAYER 1: FINE REALISTIC PCB TRACES & MICRO NODES (PERIPHERAL FRAME ONLY) -->
+            <g class="pcb-traces-layer">
+                <!-- Top-Left Traces -->
+                <path id="tr-tl1" d="M 0 60 H 120 L 180 120 V 220 L 140 260 H 0" stroke="rgba(255, 42, 75, 0.2)" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <path id="tr-tl2" d="M 40 0 V 80 L 100 140 H 220 L 260 180 V 300" stroke="rgba(255, 42, 75, 0.16)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <circle cx="120" cy="60" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="180" cy="120" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="140" cy="260" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="100" cy="140" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="220" cy="140" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <rect x="254" y="174" width="12" height="12" rx="2" fill="rgba(255, 42, 75, 0.06)" stroke="rgba(255, 42, 75, 0.25)" stroke-width="0.8" />
+
+                <!-- Top-Right Traces -->
+                <path id="tr-tr1" d="M 1920 60 H 1800 L 1740 120 V 220 L 1780 260 H 1920" stroke="rgba(255, 42, 75, 0.2)" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <path id="tr-tr2" d="M 1880 0 V 80 L 1820 140 H 1700 L 1660 180 V 300" stroke="rgba(255, 42, 75, 0.16)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <circle cx="1800" cy="60" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="1740" cy="120" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="1780" cy="260" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="1820" cy="140" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="1700" cy="140" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <rect x="1654" y="174" width="12" height="12" rx="2" fill="rgba(255, 42, 75, 0.06)" stroke="rgba(255, 42, 75, 0.25)" stroke-width="0.8" />
+
+                <!-- Bottom-Left Traces -->
+                <path id="tr-bl1" d="M 0 820 H 140 L 200 880 V 1000 L 140 1060 H 0" stroke="rgba(255, 42, 75, 0.2)" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <path id="tr-bl2" d="M 60 1080 V 960 L 140 880 H 240 L 280 920 V 1080" stroke="rgba(0, 242, 254, 0.15)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <circle cx="140" cy="820" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="200" cy="880" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="140" cy="880" r="1.8" fill="rgba(0, 242, 254, 0.3)" />
+                <circle cx="240" cy="880" r="1.8" fill="rgba(0, 242, 254, 0.3)" />
+
+                <!-- Bottom-Right Traces -->
+                <path id="tr-br1" d="M 1920 820 H 1780 L 1720 880 V 1000 L 1780 1060 H 1920" stroke="rgba(255, 42, 75, 0.2)" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <path id="tr-br2" d="M 1860 1080 V 960 L 1780 880 H 1680 L 1640 920 V 1080" stroke="rgba(255, 42, 75, 0.16)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <circle cx="1780" cy="820" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="1720" cy="880" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="1780" cy="880" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="1680" cy="880" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+
+                <!-- Side Margins Traces -->
+                <path id="tr-lm" d="M 0 420 H 90 L 150 480 V 620 L 90 680 H 0" stroke="rgba(0, 242, 254, 0.15)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <path id="tr-rm" d="M 1920 420 H 1830 L 1770 480 V 620 L 1830 680 H 1920" stroke="rgba(255, 42, 75, 0.16)" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <circle cx="90" cy="420" r="1.8" fill="rgba(0, 242, 254, 0.3)" />
+                <circle cx="150" cy="480" r="1.8" fill="rgba(0, 242, 254, 0.3)" />
+                <circle cx="1830" cy="420" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+                <circle cx="1770" cy="480" r="1.8" fill="rgba(255, 42, 75, 0.35)" />
+            </g>
+
+            <!-- LAYER 2: SLOW DISCREET DATA PACKET LIGHT DOTS -->
+            <g class="pcb-packets-layer">
+                <!-- TL Packets -->
+                <circle r="1.5" fill="#ff3b5c" filter="url(#microRedGlow)">
+                    <animateMotion path="M 0 60 H 120 L 180 120 V 220 L 140 260 H 0" dur="24s" repeatCount="indefinite" begin="0s" />
+                </circle>
+                <circle r="1.4" fill="#ff4d6d" filter="url(#microRedGlow)">
+                    <animateMotion path="M 40 0 V 80 L 100 140 H 220 L 260 180 V 300" dur="30s" repeatCount="indefinite" begin="6s" />
+                </circle>
+
+                <!-- TR Packets -->
+                <circle r="1.5" fill="#ff3b5c" filter="url(#microRedGlow)">
+                    <animateMotion path="M 1920 60 H 1800 L 1740 120 V 220 L 1780 260 H 1920" dur="26s" repeatCount="indefinite" begin="3s" />
+                </circle>
+                <circle r="1.4" fill="#00f2fe" filter="url(#microCyanGlow)">
+                    <animateMotion path="M 1880 0 V 80 L 1820 140 H 1700 L 1660 180 V 300" dur="34s" repeatCount="indefinite" begin="12s" />
+                </circle>
+
+                <!-- BL Packets -->
+                <circle r="1.5" fill="#ff3b5c" filter="url(#microRedGlow)">
+                    <animateMotion path="M 0 820 H 140 L 200 880 V 1000 L 140 1060 H 0" dur="28s" repeatCount="indefinite" begin="4s" />
+                </circle>
+                <circle r="1.4" fill="#00f2fe" filter="url(#microCyanGlow)">
+                    <animateMotion path="M 60 1080 V 960 L 140 880 H 240 L 280 920 V 1080" dur="22s" repeatCount="indefinite" begin="8s" />
+                </circle>
+
+                <!-- BR Packets -->
+                <circle r="1.5" fill="#ff3b5c" filter="url(#microRedGlow)">
+                    <animateMotion path="M 1920 820 H 1780 L 1720 880 V 1000 L 1780 1060 H 1920" dur="25s" repeatCount="indefinite" begin="5s" />
+                </circle>
+
+                <!-- Side Packets -->
+                <circle r="1.4" fill="#00f2fe" filter="url(#microCyanGlow)">
+                    <animateMotion path="M 0 420 H 90 L 150 480 V 620 L 90 680 H 0" dur="20s" repeatCount="indefinite" begin="2s" />
+                </circle>
+                <circle r="1.5" fill="#ff3b5c" filter="url(#microRedGlow)">
+                    <animateMotion path="M 1920 420 H 1830 L 1770 480 V 620 L 1830 680 H 1920" dur="27s" repeatCount="indefinite" begin="9s" />
+                </circle>
+            </g>
+        </svg>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="#" class="brand-logo" onclick="switchPage('home'); return false;">
+                <div class="logo-icon">
+                    <span class="logo-letter">L</span>
+                    <span class="logo-pulse"></span>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">LARY<span class="dot-red">.AI</span></span>
+                    <span class="brand-sub">PROCESSAMENTO LOCAL</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <button class="nav-link active" data-page="home" onclick="switchPage('home')">
+                    <i class="ri-home-4-line"></i> Home
+                </button>
+                <button class="nav-link" data-page="detalhes" onclick="switchPage('detalhes')">
+                    <i class="ri-cpu-line"></i> Detalhes Técnicos
+                </button>
+                <button class="nav-link" data-page="futuro" onclick="switchPage('futuro')">
+                    <i class="ri-rocket-line"></i> Futuro & Roadmap
+                </button>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn-primary-red" onclick="toggleDemoModal()">
+                    <i class="ri-terminal-box-line"></i> Simular Lary
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu">
+                    <i class="ri-menu-3-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER WITH PAGE ROUTING -->
+    <main class="main-content">
+
+        <!-- ==================== PAGE 1: HOME ==================== -->
+        <section id="page-home" class="page-section active">
+            <!-- Hero Section -->
+            <div class="hero-grid">
+                <div class="hero-text-content">
+                    <div class="status-pill">
+                        <span class="pill-dot"></span>
+                        <span>Assistente Cognitiva Local-First & VTuber Companion</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Automação Natural. <br>
+                        <span class="text-gradient-red">Privacidade Total.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        A <strong>Lary</strong> combina conversação em linguagem natural, execução direta de comandos no Windows e inteligência artificial rodando na sua própria máquina. Inteligente, carismática e com personalidade marcante.
+                    </p>
+
+                    <blockquote class="character-quote">
+                        <i class="ri-double-quotes-l quote-icon"></i>
+                        <span>"Inteligente, sarcástica e carismática, ela está aqui para te ajudar, te motivar e deixar seu dia muito mais produtivo."</span>
+                    </blockquote>
+
+                    <div class="hero-buttons">
+                        <button class="btn-red-solid" onclick="switchPage('detalhes')">
+                            Explorar Funcionalidades <i class="ri-arrow-right-line"></i>
+                        </button>
+                        <button class="btn-outline-red" onclick="switchPage('futuro')">
+                            Ver Roadmap Futuro
+                        </button>
+                    </div>
+
+                    <!-- Key Metrics -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Processamento Local</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">0ms</span>
+                            <span class="stat-label">Privacidade de Dados</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">12+</span>
+                            <span class="stat-label">Recursos Nativos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Showcase -->
+                <div class="hero-visual">
+                    <div class="avatar-card-container">
+                        <div class="avatar-badge">
+                            <span class="badge-dot"></span> LARY ATIVA // WINDOWS CONECTADO
+                        </div>
+                        <div class="avatar-frame">
+                            <img src="assets/lary_vtuber.webp" alt="Lary Avatar Concept" class="avatar-img" id="hero-avatar-img">
+                            <div class="avatar-overlay"></div>
+                        </div>
+
+                        <!-- Interactive Expression Controls inside Hero -->
+                        <div class="expression-bar">
+                            <span class="exp-title"><i class="ri-emotion-happy-line"></i> Expressões Lary:</span>
+                            <div class="exp-buttons">
+                                <button class="exp-btn active" data-exp="neutra" onclick="changeExpression('neutra', 'Tudo pronto para começar o trabalho.')">Neutra</button>
+                                <button class="exp-btn" data-exp="falando" onclick="changeExpression('falando', 'Processando seu comando no terminal local...')">Falando</button>
+                                <button class="exp-btn" data-exp="sorrindo" onclick="changeExpression('sorrindo', 'Excelente escolha! Sistema otimizado.')">Sorrindo</button>
+                                <button class="exp-btn" data-exp="sarcástica" onclick="changeExpression('sarcástica', 'Bora focar nesse projeto, gênio? 🙄')">Sarcástica</button>
+                                <button class="exp-btn" data-exp="pensando" onclick="changeExpression('pensando', 'Analisando os dados da tela local...')">Pensando</button>
+                                <button class="exp-btn" data-exp="irritada" onclick="changeExpression('irritada', 'Mais um erro de sintaxe no seu código?')">Irritada</button>
+                            </div>
+                        </div>
+
+                        <div class="speech-bubble" id="speech-bubble">
+                            <p id="speech-text">"Bora focar nesse projeto, gênio? 🙄"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: CARDS EXPANDÍVEIS DA DOCUMENTAÇÃO DA HOME -->
+            <div class="section-header">
+                <span class="section-tag">// VISÃO GERAL DO PROJETO</span>
+                <h2 class="section-title">Fundamentos e Arquitetura</h2>
+            </div>
+
+            <div class="expand-grid">
+                <!-- Card 1: Visão Geral -->
+                <div class="expand-card">
+                    <div class="card-badge"><i class="ri-eye-line"></i> Conceito</div>
+                    <h3 class="card-title">Visão Geral do Projeto</h3>
+                    <p class="card-summary">
+                        A Lary é uma assistente cognitiva desenvolvida para oferecer uma experiência de interação mais natural entre pessoas e computadores.
+                    </p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">
+                            Seu foco é combinar conversação em linguagem natural, automação de tarefas e processamento local, preservando a privacidade do usuário e permitindo que a inteligência artificial participe ativamente do fluxo de trabalho diário. Diferente de assistentes convencionais que vivem na nuvem, a Lary se integra diretamente às APIs do Windows e aos modelos LLM locais (via Ollama), executando ações físicas no sistema sem depender de conectividade externa constante.
+                        </p>
+                        <div class="pill-list">
+                            <span class="tech-tag">Interação Natural</span>
+                            <span class="tech-tag">Processamento Local</span>
+                            <span class="tech-tag">Fluxo de Trabalho Diário</span>
+                        </div>
+                    </div>
+                    <div class="card-hint">
+                        <span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: O Problema que busca resolver -->
+                <div class="expand-card">
+                    <div class="card-badge"><i class="ri-flashlight-line"></i> Desafio</div>
+                    <h3 class="card-title">O Problema que Busca Resolver</h3>
+                    <p class="card-summary">
+                        Grande parte das assistentes atuais responde perguntas, mas possui pouca capacidade de agir diretamente no computador do usuário.
+                    </p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">
+                            A Lary foi criada para reduzir essa distância, permitindo que a IA compreenda solicitações em linguagem natural e execute tarefas locais quando apropriado, mantendo o processamento prioritariamente na máquina do usuário. Assistentes comerciais comuns são confinadas ao navegador e exigem que você execute manualmente cada passo. A Lary opera na camada do sistema operacional.
+                        </p>
+                        <div class="comparison-mini-table">
+                            <div class="comp-col comp-bad">
+                                <strong>Assistentes Tradicionais</strong>
+                                <ul>
+                                    <li>Dependência 100% da Nuvem</li>
+                                    <li>Apenas respostas de texto</li>
+                                    <li>Sem acesso ao sistema local</li>
+                                </ul>
+                            </div>
+                            <div class="comp-col comp-good">
+                                <strong>Lary AI Engine</strong>
+                                <ul>
+                                    <li>Processamento 100% Local</li>
+                                    <li>Execução ativa no Windows</li>
+                                    <li>Compreensão de intenção</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-hint">
+                        <span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: História do Projeto -->
+                <div class="expand-card">
+                    <div class="card-badge"><i class="ri-history-line"></i> Trajetória</div>
+                    <h3 class="card-title">História do Projeto</h3>
+                    <p class="card-summary">
+                        O projeto nasceu como um estudo sobre assistentes locais e evoluiu para uma plataforma completa voltada à automação e produtividade.
+                    </p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">
+                            Desenvolvido com foco em pesquisa de inteligência artificial aplicada, o sistema cresceu de um simples protótipo de script Python para uma arquitetura desacoplada robusta. Seu desenvolvimento é incremental e prioriza modularidade, segurança e evolução contínua, permitindo acoplar novos módulos de fala, visão computacional e automações do Windows com facilidade.
+                        </p>
+                        <div class="timeline-mini">
+                            <div class="timeline-step">
+                                <span class="step-num">01</span>
+                                <span class="step-desc">Estudo de IA Local</span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-num">02</span>
+                                <span class="step-desc">Arquitetura FastAPI + Ollama</span>
+                            </div>
+                            <div class="timeline-step">
+                                <span class="step-num">03</span>
+                                <span class="step-desc">Plataforma Completa Local-First</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-hint">
+                        <span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Diferenciais -->
+                <div class="expand-card">
+                    <div class="card-badge"><i class="ri-trophy-line"></i> Vantagens</div>
+                    <h3 class="card-title">Diferenciais Exclusivos</h3>
+                    <p class="card-summary">
+                        A Lary prioriza processamento local, privacidade, automação do sistema operacional e continuidade de contexto.
+                    </p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">
+                            Buscando oferecer uma experiência mais próxima de um assistente pessoal humano do que de um chatbot tradicional, a Lary combina percepção em tempo real com avatar VTuber e integração perfeita de áudio (VB-Cable). O usuário ganha uma parceira de trabalho diária que se lembra de contextos anteriores e reage visualmente a eventos.
+                        </p>
+                        <div class="feature-bullets">
+                            <div class="bullet-item"><i class="ri-checkbox-circle-fill text-red"></i> Automação nativa do Windows</div>
+                            <div class="bullet-item"><i class="ri-checkbox-circle-fill text-red"></i> Avatar interativo VTube Studio</div>
+                            <div class="bullet-item"><i class="ri-checkbox-circle-fill text-red"></i> Roteamento de áudio profissional</div>
+                        </div>
+                    </div>
+                    <div class="card-hint">
+                        <span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION: CONCEITO VISUAL E VTUBER SHOWCASE -->
+            <div class="character-showcase-box">
+                <div class="showcase-header">
+                    <div>
+                        <span class="section-tag">// DESIGN DE PERSONAGEM & AVATAR</span>
+                        <h2 class="section-title">A Identidade Visual da Lary</h2>
+                        <p class="section-subtitle">Inspirada visualmente em Momo Ayase (Dandadan), combinando tom de pele moreno, brincos turquesa compridos e presença marcante na tela.</p>
+                    </div>
+                    <div class="showcase-mode-tabs">
+                        <button class="mode-tab-btn active" id="btn-mode-vtuber" onclick="switchVisualMode('vtuber')">
+                            <i class="ri-tv-2-line"></i> Modo VTuber (Completo)
+                        </button>
+                        <button class="mode-tab-btn" id="btn-mode-chibi" onclick="switchVisualMode('chibi')">
+                            <i class="ri-user-smile-line"></i> Modo Chibi (Diário)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="showcase-content-grid" id="showcase-content-grid">
+                    <!-- Left: Reference Sheet Highlight -->
+                    <div class="expand-card visual-card" id="showcase-left-card">
+                        <div class="visual-img-wrapper" id="visual-img-wrapper">
+                            <img src="assets/lary_reference_sheet.webp" alt="Lary Character Reference Sheet" class="visual-ref-img" id="showcase-img">
+                        </div>
+                        <div class="card-expansion">
+                            <hr class="card-divider">
+                            <h4 class="mini-h4" id="showcase-specs-title">Especificações do Modelo VTube Studio:</h4>
+                            <p class="card-full-text" id="showcase-specs-text">
+                                • Rigging completo para rastreamento de cabeça, corpo e cabelo.<br>
+                                • Sincronização labial adaptativa (Lipsync com TTS).<br>
+                                • Microexpressões: piscar, respirar, sobrancelhas e blushes dinâmicos.<br>
+                                • Paleta de cores: Preto obsidian, Vermelho carmim e Brinco turquesa (#00f2fe).
+                            </p>
+                        </div>
+                        <div class="card-hint">
+                            <span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Mode Details -->
+                    <div class="mode-details-column" id="showcase-right-column">
+                        <!-- Mode Card 1 -->
+                        <div class="expand-card" id="showcase-card-1">
+                            <div class="card-badge" id="showcase-c1-badge"><i class="ri-tv-2-line"></i> Modo 1</div>
+                            <h3 class="card-title" id="showcase-c1-title">Modo VTuber (Tela Cheia)</h3>
+                            <p class="card-summary" id="showcase-c1-summary">
+                                Modelo completo em tela ou overlay dedicado para lives, apresentações e interação imersiva de trabalho.
+                            </p>
+                            <div class="card-expansion">
+                                <hr class="card-divider">
+                                <p class="card-full-text" id="showcase-c1-full">
+                                    Neste modo, a Lary aparece em escala inteira (162 cm de referência), permitindo expressividade gestual máxima. Integração nativa com OBS Studio via VB-Cable para roteamento direto de voz e efeitos sonoros.
+                                </p>
+                            </div>
+                            <div class="card-hint">
+                                <span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span>
+                            </div>
+                        </div>
+
+                        <!-- Mode Card 2 -->
+                        <div class="expand-card" id="showcase-card-2">
+                            <div class="card-badge" id="showcase-c2-badge"><i class="ri-user-smile-line"></i> Modo 2</div>
+                            <h3 class="card-title" id="showcase-c2-title">Visão do Modelo (Frente, Lado, Costas, 3/4)</h3>
+                            <p class="card-summary" id="showcase-c2-summary">
+                                Modelo tridimensional articulado com 8 expressões faciais dinâmicas para transmissões e streaming.
+                            </p>
+                            <div class="card-expansion">
+                                <hr class="card-divider">
+                                <p class="card-full-text" id="showcase-c2-full">
+                                    Expressões disponíveis: Neutra, Falando, Sorrindo, Sarcástica, Pensando, Surpresa, Rindo e Irritada. O modelo reage instantaneamente aos comandos de áudio e às interações do usuário.
+                                </p>
+                            </div>
+                            <div class="card-hint">
+                                <span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PAGE 2: DETALHES TÉCNICOS ==================== -->
+        <section id="page-detalhes" class="page-section">
+            <div class="page-header-box">
+                <span class="section-tag">// ESPECIFICAÇÕES TÉCNICAS PROFUNDAS</span>
+                <h1 class="page-title">Detalhes Técnicos & Funcionalidades</h1>
+                <p class="page-subtitle">Explore todas as 12 funcionalidades atuais, ecossistema, stack de linguagens e os 5 princípios orientadores da Lary.</p>
+            </div>
+
+            <!-- FUNCIONALIDADES ATUAIS (12 ITEMS DO PDF - EM CARDS EXPANDÍVEIS) -->
+            <div class="section-sub-header">
+                <h2>Funcionalidades Atuais do Sistema</h2>
+                <span class="sub-badge">12 Módulos Ativos no PDF</span>
+            </div>
+
+            <div class="expand-grid-3col">
+                <!-- Func 1 -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-mic-line"></i></div>
+                    <h3 class="card-title">1. Conversação por Voz e Texto</h3>
+                    <p class="card-summary">Interface fluida bidirecional que aceita comandos de voz e digitação em tempo real.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">Permite transição perfeita entre modo silencioso (chat) e modo fala (voz contínua), utilizando pipelines otimizados de baixa latência.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+
+                <!-- Func 2 -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-global-line"></i></div>
+                    <h3 class="card-title">2. Pesquisa Web em Tempo Real</h3>
+                    <p class="card-summary">Capacidade de consultar a internet dinamicamente quando o conhecimento local precisar de atualização.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">A Lary decide autonomamente quando buscar fontes online para entregar respostas sobre notícias recentes, clima ou documentações de código.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+
+                <!-- Func 3 -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-window-line"></i></div>
+                    <h3 class="card-title">3. Controle de Aplicações Locais</h3>
+                    <p class="card-summary">Automação direta de softwares essenciais: Navegador, VS Code, Explorador e Bloco de Notas.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">Executa abertura de arquivos, criação de notas rápidas, navegação por abas e manipulação de diretórios sem intervenção manual.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+
+                <!-- Func 4 (Corrigido Ícone) -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-eye-2-line"></i></div>
+                    <h3 class="card-title">4. Percepção Visual da Tela</h3>
+                    <p class="card-summary">Captura contextual da tela para apoio visual na solução de problemas e interpretação de UI.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">Utiliza OpenCV e Pillow para analisar frames da tela do usuário, identificando erros de código, layouts ou formulários em tempo real.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+
+                <!-- Func 5 -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-task-line"></i></div>
+                    <h3 class="card-title">5. Integração Diálogo-Execução</h3>
+                    <p class="card-summary">A Lary conversa sobre a tarefa enquanto a executa no fundo do sistema operacional.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">Garante feedback auditivo e visual contínuo ao usuário enquanto scripts, compilações ou automações locais estão em andamento.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+
+                <!-- Func 6 -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-voiceprint-line"></i></div>
+                    <h3 class="card-title">6. Voz em Tempo Real (WebSockets)</h3>
+                    <p class="card-summary">Streaming duplex de dados de áudio para baixa latência de resposta durante conversas.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">Elimina o atraso tradicional de APIs HTTP síncronas, permitindo interrupções naturais na fala da assistente.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+
+                <!-- Func 7 -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-surround-sound-line"></i></div>
+                    <h3 class="card-title">7. Integração VB-Cable</h3>
+                    <p class="card-summary">Roteamento de áudio profissional compatível com OBS Studio, Discord e plataformas de transmissão.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">Isola a saída de áudio sintético da Lary em um dispositivo virtual, facilitando a captura limpa para streamers e criadores de conteúdo.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+
+                <!-- Func 8 -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-dashboard-3-line"></i></div>
+                    <h3 class="card-title">8. Interface Web de Acompanhamento</h3>
+                    <p class="card-summary">Dashboard web intuitivo para monitorar chats, logs de automação e métricas do sistema.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">Exibe em tempo real os eventos disparados, requisições de API local e permite inspeção detalhada de memória.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+
+                <!-- Func 9 -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-volume-up-line"></i></div>
+                    <h3 class="card-title">9. Reconhecimento & Síntese (STT/TTS)</h3>
+                    <p class="card-summary">Transformação instantânea de fala em texto e geração de voz sintética expressiva.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">Modelos locais otimizados de síntese que refletem as emoções e o tom característico da personagem Lary.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+
+                <!-- Func 10 -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-windows-line"></i></div>
+                    <h3 class="card-title">10. APIs Nativas do Windows</h3>
+                    <p class="card-summary">Comunicação profunda com subprocessos, gerenciador de janelas e sistema de arquivos do Windows.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">Utiliza hooks nativos para focar janelas, manipular atalhos do teclado e executar programas sem depender de softwares de terceiros.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+
+                <!-- Func 11 -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-search-eye-line"></i></div>
+                    <h3 class="card-title">11. Pesquisa Web em Tempo Real</h3>
+                    <p class="card-summary">Extração automatizada de snippets e artigos relevantes diretamente no fluxo de conversa.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">Filtra e sumariza conteúdos complexos da web antes de apresentar os pontos-chave ao usuário.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+
+                <!-- Func 12 -->
+                <div class="expand-card">
+                    <div class="card-icon"><i class="ri-brain-line"></i></div>
+                    <h3 class="card-title">12. Memória Contextual Contínua</h3>
+                    <p class="card-summary">Retenção de histórico e preferências do usuário para continuidade de interações longas.</p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">Armazena em banco de dados local o contexto do projeto atual, evitando repetições desnecessárias.</p>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+            </div>
+
+            <!-- COMPREENSÃO DE LINGUAGEM NATURAL (DEMO CARD DA DOCUMENTAÇÃO) -->
+            <div class="section-box-highlight">
+                <div class="expand-card highlight-card">
+                    <div class="card-badge"><i class="ri-chat-voice-line"></i> Módulo NLU</div>
+                    <h2 class="card-title-lg">Compreensão de Linguagem Natural Flexível</h2>
+                    <p class="card-summary">
+                        A Lary interpreta a <strong>intenção do usuário</strong> em vez de depender de frases exatas ou comandos rígidos.
+                    </p>
+                    <div class="card-expansion">
+                        <hr class="card-divider">
+                        <p class="card-full-text">
+                            Diferente de sistemas legados que exigem sintaxe estrita (ex: <code>exec open_browser --target google</code>), a Lary compreende variações coloquiais do dia a dia e mapeia para a mesma ação subjacente no Windows:
+                        </p>
+                        
+                        <div class="nlu-examples-grid">
+                            <div class="nlu-card">
+                                <i class="ri-chat-3-line text-red"></i>
+                                <span>"Abra o Google"</span>
+                            </div>
+                            <div class="nlu-card">
+                                <i class="ri-chat-3-line text-red"></i>
+                                <span>"Entre no navegador"</span>
+                            </div>
+                            <div class="nlu-card">
+                                <i class="ri-chat-3-line text-red"></i>
+                                <span>"Quero pesquisar uma coisa"</span>
+                            </div>
+                        </div>
+                        
+                        <div class="nlu-result-box">
+                            <i class="ri-arrow-down-line icon-down"></i>
+                            <div class="result-pill">
+                                <i class="ri-checkbox-circle-line"></i> Mapeado para: <strong>Ação Única -> LaunchBrowser(default_search)</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                </div>
+            </div>
+
+            <!-- TECNOLOGIAS E PRINCÍPIOS DO PROJETO -->
+            <div class="two-column-tech-grid">
+                <!-- Stack Tecnológico -->
+                <div class="tech-box">
+                    <h2 class="sub-section-title"><i class="ri-code-s-slash-line text-red"></i> Stack Tecnológico</h2>
+                    <div class="tech-cards-wrapper">
+                        <div class="expand-card mini-tech">
+                            <div class="tech-head"><strong>Python 3.11+</strong> <span class="tech-role">Linguagem Core</span></div>
+                            <div class="card-expansion">
+                                <p class="card-full-text">Utilizado para orquestração de threads, processamento assíncrono e controle das bibliotecas de IA.</p>
+                            </div>
+                        </div>
+                        <div class="expand-card mini-tech">
+                            <div class="tech-head"><strong>FastAPI & WebSockets</strong> <span class="tech-role">Servidor Backend</span></div>
+                            <div class="card-expansion">
+                                <p class="card-full-text">Prover endpoints REST de altíssima velocidade e comunicação em tempo real via canal duplex.</p>
+                            </div>
+                        </div>
+                        <div class="expand-card mini-tech">
+                            <div class="tech-head"><strong>Ollama (Local LLM)</strong> <span class="tech-role">Motor de Linguagem</span></div>
+                            <div class="card-expansion">
+                                <p class="card-full-text">Executa modelos como Llama 3, DeepSeek R1 e Mistral 100% offline no hardware do usuário.</p>
+                            </div>
+                        </div>
+                        <div class="expand-card mini-tech">
+                            <div class="tech-head"><strong>OpenCV & Pillow</strong> <span class="tech-role">Visão Computacional</span></div>
+                            <div class="card-expansion">
+                                <p class="card-full-text">Leitura de tela, pré-processamento de frames e detecção de elementos gráficos da UI.</p>
+                            </div>
+                        </div>
+                        <div class="expand-card mini-tech">
+                            <div class="tech-head"><strong>Pygame-ce & Win32 APIs</strong> <span class="tech-role">Áudio & SO</span></div>
+                            <div class="card-expansion">
+                                <p class="card-full-text">Gerenciamento de áudio com baixa latência e controle direto das janelas nativas do Windows.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Princípios e Limitações -->
+                <div class="principles-box">
+                    <h2 class="sub-section-title"><i class="ri-shield-keyhole-line text-red"></i> Princípios & Limitações</h2>
+                    
+                    <div class="expand-card principle-card">
+                        <h3 class="card-title">5 Princípios Orientadores</h3>
+                        <div class="card-expansion">
+                            <ul class="principles-list">
+                                <li><i class="ri-check-double-line text-red"></i> <strong>Local-first sempre que possível:</strong> Máxima autonomia sem nuvem.</li>
+                                <li><i class="ri-check-double-line text-red"></i> <strong>Privacidade do usuário:</strong> Nenhum dado pessoal é transmitido a terceiros.</li>
+                                <li><i class="ri-check-double-line text-red"></i> <strong>Linguagem natural acima de comandos rígidos:</strong> Flexibilidade total.</li>
+                                <li><i class="ri-check-double-line text-red"></i> <strong>Evolução modular:</strong> Módulos desacoplados fáceis de expandir.</li>
+                                <li><i class="ri-check-double-line text-red"></i> <strong>Automação segura:</strong> Execução controlada com confirmação quando necessário.</li>
+                            </ul>
+                        </div>
+                        <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                    </div>
+
+                    <div class="expand-card principle-card warning-theme">
+                        <h3 class="card-title"><i class="ri-alert-line"></i> Limitações Atuais do Projeto</h3>
+                        <div class="card-expansion">
+                            <ul class="principles-list">
+                                <li><strong>Hardware Compatível:</strong> Requer GPU/RAM adequada para modelos LLM locais maiores.</li>
+                                <li><strong>Plataforma Principal:</strong> Otimizado prioritization para o ecossistema Windows.</li>
+                                <li><strong>Catálogo de Automações:</strong> Em expansão contínua para novas aplicações.</li>
+                            </ul>
+                        </div>
+                        <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PAGE 3: FUTURO & ROADMAP ==================== -->
+        <section id="page-futuro" class="page-section">
+            <div class="page-header-box">
+                <span class="section-tag">// VISÃO DE EVOLUÇÃO E PRÓXIMOS PASSOS</span>
+                <h1 class="page-title">Roadmap Público & O Futuro da Lary</h1>
+                <p class="page-subtitle">Acompanhe as 5 etapas de desenvolvimento planejadas para transformar a Lary em uma assistente autônoma multi-etapas.</p>
+            </div>
+
+            <!-- ROADMAP EM 5 ETAPAS (DO PDF - CARDS EXPANDÍVEIS NA TIMELINE) -->
+            <div class="roadmap-timeline">
+                <!-- Step 1 -->
+                <div class="timeline-card-wrapper">
+                    <div class="timeline-marker">1</div>
+                    <div class="expand-card roadmap-card">
+                        <span class="step-badge">Fase 1</span>
+                        <h3 class="card-title">Evolução das Capacidades de Voz</h3>
+                        <p class="card-summary">Aprimoramento contínuo da síntese e reconhecimento de fala (TTS/STT).</p>
+                        <div class="card-expansion">
+                            <hr class="card-divider">
+                            <p class="card-full-text">
+                                Introdução de síntese emocional adaptativa com modulação de tom em tempo real, redução adicional de latência para menos de 200ms e melhor isolamento de ruído ambiente durante a captação de voz.
+                            </p>
+                        </div>
+                        <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-card-wrapper">
+                    <div class="timeline-marker">2</div>
+                    <div class="expand-card roadmap-card">
+                        <span class="step-badge">Fase 2</span>
+                        <h3 class="card-title">Expansão da Percepção Visual</h3>
+                        <p class="card-summary">Evolução da interpretação de tela para suporte multimodal completo.</p>
+                        <div class="card-expansion">
+                            <hr class="card-divider">
+                            <p class="card-full-text">
+                                Integração com modelos VLM (Vision Language Models) locais, permitindo que a Lary leia diagramas, identifique botões de interfaces complexas sem depender de OCR tradicional e compreenda vídeos em tempo real.
+                            </p>
+                        </div>
+                        <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-card-wrapper">
+                    <div class="timeline-marker">3</div>
+                    <div class="expand-card roadmap-card">
+                        <span class="step-badge">Fase 3</span>
+                        <h3 class="card-title">Novas Integrações e Automações</h3>
+                        <p class="card-summary">Ampliação do catálogo de suporte para softwares de terceiros e APIs locais.</p>
+                        <div class="card-expansion">
+                            <hr class="card-divider">
+                            <p class="card-full-text">
+                                Expansão das capacidades de controle para softwares de edição (Photoshop, Premiere), suítes de escritório (Excel, Word), ferramentas de comunicação (Discord, Slack) e suporte a scripts Python dinâmicos gerados pela própria IA.
+                            </p>
+                        </div>
+                        <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-card-wrapper">
+                    <div class="timeline-marker">4</div>
+                    <div class="expand-card roadmap-card">
+                        <span class="step-badge highlight-step">Fase 4 - Marco Principal</span>
+                        <h3 class="card-title">Agentes Capazes de Executar Planos de Múltiplas Etapas</h3>
+                        <p class="card-summary">Autonomia para decompor objetivos complexos em sub-tarefas encadeadas.</p>
+                        <div class="card-expansion">
+                            <hr class="card-divider">
+                            <p class="card-full-text">
+                                A Lary deixará de executar apenas comandos pontuais para planejar e realizar fluxos de trabalho completos (ex: <em>"Baixe este relatório, extraia a tabela em CSV, abra no Excel e crie um gráfico resumo"</em>) de forma 100% autônoma e com auto-correção de erros.
+                            </p>
+                        </div>
+                        <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="timeline-card-wrapper">
+                    <div class="timeline-marker">5</div>
+                    <div class="expand-card roadmap-card">
+                        <span class="step-badge">Fase 5</span>
+                        <h3 class="card-title">Interface Gráfica Mais Imersiva</h3>
+                        <p class="card-summary">Interface de usuário holográfica e integração profunda no desktop.</p>
+                        <div class="card-expansion">
+                            <hr class="card-divider">
+                            <p class="card-full-text">
+                                Transição para overlays 3D em tempo real com física avançada, animações procedurais e personalização completa de cenários, transformando a Lary em uma presença visual impressionante no seu monitor.
+                            </p>
+                        </div>
+                        <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ EXPANDÍVEL -->
+            <div class="faq-section">
+                <div class="section-header">
+                    <span class="section-tag">// DÚVIDAS FREQUENTES</span>
+                    <h2 class="section-title">Perguntas Frequentes sobre o Projeto</h2>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="expand-card faq-card">
+                        <h3 class="card-title"><i class="ri-questionnaire-line text-red"></i> A Lary precisa de internet para funcionar?</h3>
+                        <div class="card-expansion">
+                            <p class="card-full-text">Não para o núcleo! Por ser Local-First, a conversação, a automação do Windows e o raciocínio da IA rodam inteiramente na sua máquina via Ollama. A conexão só é utilizada se você solicitar pesquisas na web em tempo real.</p>
+                        </div>
+                        <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                    </div>
+
+                    <div class="expand-card faq-card">
+                        <h3 class="card-title"><i class="ri-questionnaire-line text-red"></i> Como funciona a integração com o VTube Studio?</h3>
+                        <div class="card-expansion">
+                            <p class="card-full-text">A Lary se comunica via WebSocket com a API oficial do VTube Studio ou utiliza sprites procedurais em Pygame-ce para alternar expressões faciais (Neutra, Sorrindo, Sarcástica, etc.) em tempo real durante a fala.</p>
+                        </div>
+                        <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                    </div>
+
+                    <div class="expand-card faq-card">
+                        <h3 class="card-title"><i class="ri-questionnaire-line text-red"></i> Quais são os requisitos mínimos de sistema?</h3>
+                        <div class="card-expansion">
+                            <p class="card-full-text">Recomenda-se Windows 10/11 64-bit, processador quad-core+, 16GB de RAM e uma GPU com pelo menos 6GB de VRAM (NVIDIA RTX) para rodar modelos LLM locais (Llama3/Mistral/DeepSeek) com excelente fluidez.</p>
+                        </div>
+                        <div class="card-hint"><span class="hint-text"><i class="ri-arrow-down-s-line"></i> Expandir</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PORTFOLIO CALL TO ACTION BANNER -->
+            <div class="portfolio-cta-banner">
+                <div class="cta-content">
+                    <span class="cta-tag">PROJETO DE PORTFÓLIO DE ENGENHARIA DE IA</span>
+                    <h2>Interessado nesta Arquitetura Cognitiva?</h2>
+                    <p>Este projeto foi projetado para demonstrar expertise em automação local, integração de LLMs offline, interfaces modernas e arquitetura desacoplada em Python.</p>
+                    <div class="cta-buttons">
+                        <button class="btn-red-solid" onclick="toggleDemoModal()">
+                            <i class="ri-play-circle-line"></i> Testar Simulação Interativa
+                        </button>
+                        <button class="btn-outline-red" onclick="switchPage('home')">
+                            <i class="ri-arrow-up-line"></i> Voltar ao Início
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- INTERACTIVE DEMO MODAL / SIMULATOR (SEM CAMPO DE ESCRITA) -->
+    <div class="modal-backdrop" id="demo-modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <span class="pulse-green"></span>
+                    <span>Simulador do Terminal Lary // Sessão Local</span>
+                </div>
+                <button class="modal-close" onclick="toggleDemoModal()"><i class="ri-close-line"></i></button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="sim-sidebar">
+                    <div class="sim-avatar-box">
+                        <img src="assets/lary_vtuber.webp" alt="Lary Avatar" class="sim-avatar-img" id="sim-avatar">
+                        <span class="sim-status">ONLINE // OLLAMA PRONTO</span>
+                    </div>
+                    <div class="sim-specs">
+                        <div class="spec-row"><span>Motor:</span> <strong>Python 3.11</strong></div>
+                        <div class="spec-row"><span>LLM:</span> <strong>Ollama Local</strong></div>
+                        <div class="spec-row"><span>Áudio:</span> <strong>VB-Cable Ativo</strong></div>
+                    </div>
+                </div>
+
+                <div class="sim-terminal">
+                    <div class="terminal-logs" id="terminal-logs">
+                        <div class="log-line sys"><span class="log-time">[07:30:00]</span> Núcleo Lary Inicializado. APIs do Windows Conectadas.</div>
+                        <div class="log-line lary"><span class="log-time">[07:30:01]</span> <strong>Lary:</strong> "Tô na área! Clique em uma das perguntas abaixo para simular."</div>
+                    </div>
+
+                    <div class="terminal-quick-prompts">
+                        <span class="prompt-hint">Selecione uma simulação em linguagem natural:</span>
+                        <button class="prompt-btn" onclick="sendSimCommand('Abra o Google')">"Abra o Google"</button>
+                        <button class="prompt-btn" onclick="sendSimCommand('Entre no navegador')">"Entre no navegador"</button>
+                        <button class="prompt-btn" onclick="sendSimCommand('Quero pesquisar uma coisa')">"Quero pesquisar uma coisa"</button>
+                        <button class="prompt-btn" onclick="sendSimCommand('Qual a sua limitação?')">"Qual a sua limitação?"</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SITE FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="brand-name">LARY<span class="dot-red">.AI</span></span>
+                <p>Assistente Cognitiva Local-First para Automação e Interação Natural</p>
+            </div>
+            <div class="footer-links">
+                <span class="footer-title">Navegação Rápida</span>
+                <a href="#" onclick="switchPage('home'); return false;">Home</a>
+                <a href="#" onclick="switchPage('detalhes'); return false;">Detalhes Técnicos</a>
+                <a href="#" onclick="switchPage('futuro'); return false;">Futuro & Roadmap</a>
+            </div>
+            <div class="footer-tech">
+                <span class="footer-title">Stack Principal</span>
+                <p>Python 3.11+ • FastAPI • WebSockets • Ollama • OpenCV • Pygame-ce • Windows APIs</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Lary AI Project. Desenvolvido para Portfólio de Alta Qualidade. Criado por Mateus Fernandes Da Silva.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="app.js"></script>
+</body>
+</html>
